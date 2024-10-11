@@ -10,5 +10,8 @@
 <br>
 
 ### Praktikum 5
-![alt](image/P5.gif)
+![alt](image/P5-1.png)
+![alt](image/P5-2.png)
 ### Tugas Praktikum 2
+![alt](image/Tugas-1.png)
+![alt](image/Tugas-2.png)

@@ -1,24 +1,23 @@
 import 'package:belanja/pages/home_page.dart';
 import 'package:belanja/pages/item_page.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 void main() {
-  runApp(const MyApp());
-}
+  GoRouter router = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => HomePage(),
+      ),
+      GoRoute(
+        path: '/item',
+        builder: (context, state) => ItemPage(),
+      ),
+    ],
+  );
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/item': (context) => ItemPage(),
-      },
-    );
-  }
+  runApp(MaterialApp.router(
+    routerConfig: router,
+  ));
 }
